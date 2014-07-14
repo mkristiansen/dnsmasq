@@ -76,7 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       #chef.json = { mysql_password: "foo" }
       chef.json = { 
         "dnsmasq" => {
-          "domain" => "mul",
+          "domain" => "",
           # allow_solo_search" => "true",
           "dns" => {
             "domain-needed" => "true",
@@ -85,14 +85,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             "hosts" => {
               #"dubsvt122.mul.ie.ibm.com" => "9.161.102.85",
               #"dubsvt121.mul.ie.ibm.com" => "9.161.102.80"
-              "dubsvt122.mul.ie.ibm.com" => "10.1.2.205"
+              "dub122.bogus.domain" => "10.1.2.205"
               }
             }
           }
         }
 
-
-      chef.data_bags_path = "./"
       chef.add_recipe "dnsmasq::dns" 
      end
   end
