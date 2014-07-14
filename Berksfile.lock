@@ -1,0 +1,7 @@
+DEPENDENCIES
+  dnsmasq
+    git: git://github.com/moutten/chef-dnsmasq.git
+    revision: 4da7c38dab77dcb1e6d2b996cb2d325244e36575
+
+GRAPH
+  dnsmasq (0.1.1)
